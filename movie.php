@@ -30,7 +30,7 @@ class Movies
 }
 }
 
-//crea 2 variabili d'istanza e gli passo i dati del costruttore
+//crea 2 variabili d'istanza e gli passo i dati del costruttore che sono obbligatori
 $films = new Movies('Matrix', '1999', 'scienze fiction');
 $cartoons = new Movies('Wall-e', '2008', 'scienze fiction');
 
@@ -56,5 +56,11 @@ $cartoons->film_production_house = 'Warner Bros. Pictures';
 
 
 //il var di film richiama la funzione che concatena titolo, anno e genere
-var_dump($films->getMovieDescription());
-var_dump($cartoons->getMovieDescription());
+// var_dump($films->getMovieDescription());
+// var_dump($cartoons->getMovieDescription());
+
+?>
+
+<?php echo "<h1>Questi sono i dati del film:</h1> </br> <p> {$films->getMovieDescription()}</p>" ?>
+
+<?php echo "<h1>Questi sono i dati del cartoon:</h1> </br> <p> {$cartoons->getMovieDescription()}</p>" ?>
