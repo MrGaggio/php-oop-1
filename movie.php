@@ -22,17 +22,17 @@ class Movies
 
 
     //crea un costruttore
-//     public function __construct($title, $movie_director, $film_production_house)
-// {
-//     $this->title = $title;
-//     $this->movie_director = $movie_director;
-//     $this->film_production_house = $film_production_house;
-// }
+    public function __construct($title, $year, $genre)
+{
+    $this->title = $title;
+    $this->movie_director = $year;
+    $this->film_production_house = $genre;
+}
 }
 
-//crea 2 variabili d'istanza
-$films = new Movies();
-$cartoons = new Movies();
+//crea 2 variabili d'istanza e gli passo i dati del costruttore
+$films = new Movies('Matrix', '1999', 'scienze fiction');
+$cartoons = new Movies('Wall-e', '2008', 'scienze fiction');
 
 $films->title = 'Matrix';
 $films->genre = 'scienze fiction';
@@ -55,6 +55,6 @@ $cartoons->film_production_house = 'Warner Bros. Pictures';
 
 
 
-
+//il var di film richiama la funzione che concatena titolo, anno e genere
 var_dump($films->getMovieDescription());
-var_dump($cartoons);
+var_dump($cartoons->getMovieDescription());
