@@ -12,6 +12,15 @@ class Movies
     public $imdb_rate;
     public $film_production_house;
 
+    //crea una funzione che concatena titolo, anno e genere.
+    public function getMovieDescription()
+    {
+        return $this->title . ', ' . $this->year . ', ' . $this->genre;
+    }
+
+
+
+
     //crea un costruttore
 //     public function __construct($title, $movie_director, $film_production_house)
 // {
@@ -47,5 +56,5 @@ $cartoons->film_production_house = 'Warner Bros. Pictures';
 
 
 
-var_dump($films);
+var_dump($films->getMovieDescription());
 var_dump($cartoons);
