@@ -3,9 +3,17 @@
 //crea classe Movies
 class Movies
 {
-
+    public $tile;
+    public $year;
+    public $actors;
+    public $musics;
+    public $movie_director;
+    public $photography;
+    public $imdb_rate;
+    public $film_production_house;
+    
     //crea un costruttore
-public function __construct($title, $movie_director, $film_production_house)
+    public function __construct($title, $movie_director, $film_production_house)
 {
     $this->title = $title;
     $this->movie_director = $movie_director;
